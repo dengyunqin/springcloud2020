@@ -28,7 +28,7 @@
         <lombok.version>1.18.2</lombok.version>
         <logback.version>1.2.3</logback.version>
         <commons.version>2.4.2</commons.version>
-        <fastjson.version>1.2.8</fastjson.version>
+        <fastjson.version>1.2.25</fastjson.version>
         <guava.version>27.1-jre</guava.version>
         <shiro.version>1.4.0</shiro.version>
     </properties>
