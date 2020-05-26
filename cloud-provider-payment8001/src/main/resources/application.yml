@@ -1,0 +1,24 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: org.gjt.mm.mysql.Driver
+        url: jdbc:mysql://192.168.1.120:3306/test?useAffectedRows=true
+        username: root
+        password: abcd1234
+        dbcp2:
+          min-idle: 3
+          initial-size: 5
+          max-total: 10
+          validationQuery: SELECT 1 from dual
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          max-wait-millis: 3000
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
