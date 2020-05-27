@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class OrderController {
-    public static final String payment_url ="192.168.1.74:8001/payment";
+    public static final String payment_url ="http://localhost:8001/payment";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -23,6 +23,6 @@ public class OrderController {
 
     @GetMapping(value = "/consumer/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) throws Exception{
-        return restTemplate.getForObject(payment_url+"/payment/get/"+id,CommonResult.class);
+        return restTemplate.getForObject(payment_url+"/get/"+id,CommonResult.class);
     }
 }

@@ -18,7 +18,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult create(Payment payment) throws Exception{
+    public CommonResult create(@RequestBody Payment payment) throws Exception{
         int result = paymentService.create(payment);
         log.info("*******插入结果："+result);
         if(result > 0){

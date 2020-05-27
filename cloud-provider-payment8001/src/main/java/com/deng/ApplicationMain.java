@@ -10,8 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
  * Created by dengyunqing on 2020/5/27.
  */
 @SpringBootApplication
-@ComponentScan("com.deng")
-@MapperScan("com.dneg.*.mapper")
+@ComponentScan("com.deng.*")
+@MapperScan("com.deng.*.mapper")
 public class ApplicationMain {
     public static void main(String[] arg0){
         SpringApplication.run(ApplicationMain.class,arg0);
