@@ -8,8 +8,8 @@ import org.apache.ibatis.annotations.Param;
  * Created by Administrator on 2020/5/26.
  */
 @Mapper
-public interface PaymentMapper {
-    public int create (Payment payment)throws Exception;
-    public Payment getPaymentById(@Param("id") Long id)throws Exception;
+public abstract class PaymentMapper {
+    public abstract int create(Payment payment)throws Exception;
+    public abstract Payment getPaymentById(@Param("id") Long id)throws Exception;
 
 }
