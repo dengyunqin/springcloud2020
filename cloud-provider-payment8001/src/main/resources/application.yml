@@ -7,7 +7,7 @@ spring:
   datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: org.gjt.mm.mysql.Driver
-        url: jdbc:mysql://192.168.1.120:3306/test?useAffectedRows=true
+        url: jdbc:mysql://127.0.0.1:3306/test?useAffectedRows=true
         username: root
         password: abcd1234
         dbcp2:
@@ -23,3 +23,12 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   mapper-locations: classpath:mybatis/mapper/**/*.xml
   type-aliases-package: com.deng.entities
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    #表示不从eureka注册中心抓取已有的注册信息，默认为true，单节点无所谓
+    #集群必须为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    register-with-eureka: true
