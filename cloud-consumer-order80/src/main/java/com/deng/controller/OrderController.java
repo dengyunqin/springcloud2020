@@ -11,8 +11,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class OrderController {
-    public static final String payment_url ="http://localhost:8001/payment";
-
+    //public static final String payment_url ="http://localhost:8001/payment";
+    public static final String payment_url ="http://CLOUD-PAYMENT-SERVICE/payment";
     @Autowired
     private RestTemplate restTemplate;
 
