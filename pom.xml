@@ -35,7 +35,7 @@
         <commons.version>2.4.2</commons.version>
         <fastjson.version>1.2.8</fastjson.version>
         <guava.version>27.1-jre</guava.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.7.0</shiro.version>
     </properties>
 
     <dependencyManagement>
